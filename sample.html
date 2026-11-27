@@ -21,13 +21,19 @@ html,body{margin:0;height:100%;background:#FFFBF5;overflow:hidden;font-family:De
 #mclip{left:720px;top:0;width:1200px;height:1080px;overflow:hidden}
 #mclip .pc{overflow:hidden}
 #mclip .pc img{max-width:none}
-#drop{left:1366px;top:305px;width:324px;height:324px;opacity:0}
+#drop{left:0;top:0;width:324px;height:324px}
+#mclip .pc{cursor:pointer}
+.rip{left:0;top:0;width:120px;height:120px;border-radius:50%;border:3px solid #A97EFE;opacity:0;pointer-events:none}
 #flood{border-radius:50%;background:#A97EFE;opacity:0}
 .panel{top:0;width:640px;height:1080px;overflow:hidden}
 .panel .bg{inset:0}
-.panel .ph{left:0;top:0;width:640px;height:700px;overflow:hidden}
-.panel .ph img{left:0;top:0;width:640px;height:700px;object-fit:cover}
-.panel .nm{left:56px;top:722px;width:560px;height:150px;overflow:hidden;color:#fff}
+.panel .ph{left:0;top:0;width:640px;height:560px;overflow:hidden}
+.panel .ph img{left:0;top:0;width:640px;height:560px;object-fit:cover}
+.panel .items{left:56px;top:716px;width:560px}
+#stage .panel .it{position:relative;width:560px;height:44px;overflow:hidden;color:#fff;font-size:27px;line-height:44px}
+.panel .it span{position:absolute;left:0;top:0;white-space:nowrap;padding-left:22px}
+.panel .it span::before{content:'';position:absolute;left:0;top:19px;width:8px;height:8px;border-radius:50%;background:#FFFBF5}
+.panel .nm{left:56px;top:584px;width:560px;height:150px;overflow:hidden;color:#fff}
 .panel .nm b{position:absolute;left:0;top:0;font-size:66px;font-weight:700;white-space:nowrap;line-height:1.1}
 .panel .nm i{position:absolute;left:2px;top:86px;font:700 28px DeckMono,monospace;font-style:normal;opacity:.85;white-space:nowrap}
 .hl{top:0;width:3px;height:1080px;background:#FFFBF5}
@@ -42,6 +48,6 @@ html,body{margin:0;height:100%;background:#FFFBF5;overflow:hidden;font-family:De
 </head>
 <body>
 <div id="stage"></div>
-<script src="dist/sample.js?v=1795757667"></script>
+<script src="dist/sample.js?v=1795760370"></script>
 </body>
 </html>
