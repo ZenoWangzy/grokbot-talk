@@ -28,6 +28,23 @@ html,body{margin:0;height:100%;background:#000;overflow:hidden;cursor:none;font-
 #notes .vis,#notes .src,#notes .nx{font-weight:400;font-size:1.9vmin;line-height:1.5;color:rgba(244,241,234,.6);margin-top:.8vmin}
 #notes .nx{color:#38e8ff}
 body:not(.ready) #stage{opacity:0}
+#logo{position:absolute;right:2.6%;top:4%;width:3.2%;opacity:.92;pointer-events:none;--fg:#f4f1ea;--bg:#000}#logo svg{width:100%;height:auto;display:block}
+#pg{position:absolute;right:2.6%;bottom:3.2%;font:400 1.5em DeckMono,monospace;color:rgba(244,241,234,.5);pointer-events:none}
+#fade{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none}
+.cap{position:absolute;inset:0;pointer-events:none}
+.cap .l,.cap .sub{opacity:0;transform:translateY(1.2em);transition:opacity 1s ease,transform 1.2s cubic-bezier(.2,.7,.2,1),letter-spacing 1.6s ease}
+.cap.in .l,.cap.in .sub{opacity:1;transform:none}
+.cap.tl{padding:7% 0 0 5.2%}.cap.tl .l{font-weight:400;font-size:5.2em;line-height:1.25;color:#fff;max-width:62%;text-shadow:0 .1em 1.2em rgba(0,0,0,.55)}
+.cap.tl .l+.l{font-size:3.2em;color:rgba(255,255,255,.75);margin-top:.5em}
+.cap.hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.cap.hero .l{font-weight:700;font-size:11em;line-height:1.1;color:#fff;letter-spacing:.02em;text-shadow:0 .05em 1em rgba(0,0,0,.5)}
+.cap.hero .l+.l{font-weight:400;font-size:4.2em;color:rgba(255,255,255,.8);margin-top:.4em}
+.cap.hero .sub,.cap.cover .sub{font-weight:400;font-size:3em;color:rgba(255,255,255,.7);margin-top:1em;letter-spacing:.3em}
+.cap.cover{display:flex;flex-direction:column;justify-content:center;padding-left:46%}
+.cap.cover .l{font-weight:700;font-size:8.4em;line-height:1.15;color:#fff;text-shadow:0 .05em 1em rgba(0,0,0,.6)}
+.cap.foot{display:flex;align-items:flex-end;justify-content:center;padding-bottom:5%}.cap.foot .l{font-weight:400;font-size:2.4em;color:rgba(255,255,255,.6)}
+.cap.split{display:flex;justify-content:space-between;align-items:flex-start;padding:7% 6% 0}.cap.split .l{font-weight:400;font-size:3.6em;color:#fff;max-width:42%;text-shadow:0 .1em 1em rgba(0,0,0,.6)}.cap.split .l+.l{text-align:right;color:#ffd9a0}
+.cap.none{display:none}
 </style>
 </head>
 <body>
@@ -36,10 +53,16 @@ body:not(.ready) #stage{opacity:0}
   <video id="vid" playsinline preload="auto"></video>
   <div id="vcard"></div>
   <div id="hint">按任意键播放</div>
+  <div id="cap" class="cap"></div>
+  <div id="logo"></div><div id="pg"></div>
+  <div id="fade"></div>
   <div id="bar"></div>
   <div id="notes"></div>
 </div>
 <script src="beats.js"></script>
-<script src="dist/deck.js"></script>
+<script>
+// 3D deck needs WebGL2; without it, fall back to the older 2D deck
+(function(){var ok=false;try{ok=!!document.createElement('canvas').getContext('webgl2');}catch(e){}var s=document.createElement('script');s.src=(ok&&location.search.indexOf('2d')<0)?'dist/deck3d.js':'dist/deck.js';document.body.appendChild(s);})();
+</script>
 </body>
 </html>
