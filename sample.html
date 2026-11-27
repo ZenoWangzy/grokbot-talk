@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>样片：封面 + 学习</title>
+<title>我用 Grok Bot 赚钱 · Zeno 王泽宇</title>
 <style>
 @font-face{font-family:DeckSans;font-weight:400;src:url(fonts/DeckSans-400.woff2) format("woff2")}
 @font-face{font-family:DeckSans;font-weight:700;src:url(fonts/DeckSans-700.woff2) format("woff2")}
@@ -47,36 +47,45 @@ html,body{margin:0;height:100%;background:#FFFBF5;overflow:hidden;font-family:De
 #logo svg{width:100%;height:100%}
 #L{left:0;top:0;width:1920px;height:1080px}
 #F{left:0;top:0;width:1920px;height:1080px;opacity:0}
-#ftitle{left:120px;top:70px}
-#ftitle b{position:relative;display:block;font-size:110px;font-weight:700;color:#A97EFE;line-height:1.1}
-#ftitle span{position:relative;display:block;font-size:42px;color:#1b1b1f;margin-top:4px}
-#fworld{left:0;top:0;width:1920px;height:1080px;transform-origin:960px 760px}
-#belt{left:240px;top:742px;width:1520px;height:22px;border-radius:11px;background:#1b1b1f;transform-origin:0 50%}
-.st{top:520px;width:0;height:0;cursor:pointer}
-.stb{left:-110px;top:0;width:220px;height:222px;transform-origin:50% 100%;display:flex}
+#ftitle{left:120px;top:60px}
+#stage #ftitle b{position:relative;display:block;font-size:96px;font-weight:700;color:#A97EFE;line-height:1.1}
+#stage #ftitle span{position:relative;display:block;font-size:38px;color:#1b1b1f;margin-top:4px}
+#fworld{left:0;top:0;width:1920px;height:1080px;transform-origin:960px 600px}
+.belt{height:22px;border-radius:11px;background:#1b1b1f;transform-origin:0 50%}
+.beltd{width:22px;border-radius:11px;background:#1b1b1f;transform-origin:50% 0}
+.rowl{left:70px;width:170px;color:#1b1b1f}
+#stage .rowl b{position:relative;display:block;font-size:44px;font-weight:700}
+#stage .rowl i{position:relative;display:block;font-size:22px;font-style:normal;color:#77777f;margin-top:2px}
+.st{width:0;height:0;cursor:pointer}
+.stb{left:-90px;top:0;width:180px;height:150px;transform-origin:50% 100%}
 .stb .ms{left:50%;bottom:0;top:auto;transform:translateX(-50%)}
-.stl{left:-110px;top:270px;width:220px;height:80px;overflow:hidden;text-align:center;color:#1b1b1f}
-#stage .stl i{position:relative;display:block;font:700 22px DeckMono,monospace;font-style:normal;color:#8a8a92}
-#stage .stl b{position:relative;display:block;font-size:38px;font-weight:700}
-.tk{left:0;top:668px;width:110px;height:72px;border-radius:12px;background:#fff;box-shadow:0 8px 22px rgba(27,27,31,.14);overflow:hidden}
-.tks{left:0;top:0;width:110px;height:14px}
-.tk span{left:0;top:24px;width:110px;text-align:center;font-size:26px;font-weight:700;color:#1b1b1f}
-#fcount{left:1480px;top:120px;text-align:right;width:320px;color:#1b1b1f}
-#fcount b{position:relative;display:block;font:700 96px DeckMono,monospace;color:#A97EFE}
-#fcount span{position:relative;display:block;font-size:34px}
-#bars{left:150px;top:560px;width:1640px;height:420px}
+.stl{left:-100px;top:182px;width:200px;height:52px;overflow:hidden;text-align:center;color:#1b1b1f}
+#stage .stl b{position:relative;display:block;font-size:32px;font-weight:700}
+.fsvg{left:0;top:0;width:1920px;height:1080px;overflow:visible;pointer-events:none}
+.looplab{left:1080px;top:510px;width:200px;text-align:center;font-size:24px;color:#A97EFE;font-weight:700}
+.tk{left:0;top:0;width:100px;height:62px;border-radius:12px;background:#fff;box-shadow:0 8px 22px rgba(27,27,31,.14);overflow:hidden}
+.tks{left:0;top:0;width:100px;height:12px}
+.tk span{left:0;top:20px;width:100px;text-align:center;font-size:24px;font-weight:700;color:#1b1b1f}
+#bars{left:150px;top:690px;width:1640px;height:300px}
 .bar{bottom:0;top:auto;width:32px;border-radius:8px 8px 0 0;background:#A97EFE;transform-origin:50% 100%;cursor:pointer}
 .bar:nth-child(4n+2){background:#1084FE}.bar:nth-child(4n+3){background:#00C972}.bar:nth-child(4n){background:#FF9800}
-.bart{left:-40px;top:-52px;width:112px;text-align:center;font:700 30px DeckMono,monospace;color:#1b1b1f}
-#fbig{left:1120px;top:150px;width:700px;text-align:right;color:#1b1b1f}
-#fbig b{position:relative;display:block;font-size:56px;font-weight:700}
-#fbig span{position:relative;display:block;font:700 170px DeckMono,monospace;color:#A97EFE;line-height:1}
-#fbig i{position:relative;display:block;font-size:44px;font-style:normal;font-weight:700}
-#curtain{inset:0;background:#FFFBF5;opacity:0;pointer-events:none}
+.bart{left:-80px;top:-46px;width:192px;text-align:center;font-size:26px;font-weight:700;color:#1b1b1f;white-space:nowrap}
+#barcap{left:150px;top:1006px;font-size:26px;color:#77777f}
+#fbig{left:120px;top:110px;width:900px;color:#1b1b1f}
+#stage #fbig b{position:relative;display:block;font-size:52px;font-weight:700}
+#stage #fbig span{position:relative;display:block;font:700 220px DeckMono,monospace;color:#A97EFE;line-height:1}
+#stage #fbig i{position:relative;display:block;font-size:52px;font-style:normal;font-weight:700}
+.stat{left:1080px;width:720px;height:130px;border-left:6px solid #A97EFE;padding-left:28px;color:#1b1b1f}
+#stage .stat i{position:relative;display:block;font-size:26px;font-style:normal;color:#77777f}
+#stage .stat b{position:relative;display:block;font-size:58px;font-weight:700;line-height:1.15}
+#stage .stat span{position:relative;display:block;font-size:24px;color:#77777f}
+.mod{left:0;top:0;width:1920px;height:1080px;overflow:hidden}
+#logo,.rip{z-index:5}
+#curtain{z-index:6;inset:0;background:#FFFBF5;opacity:0;pointer-events:none}
 </style>
 </head>
 <body>
 <div id="stage"></div>
-<script src="dist/sample.js?v=1795761235"></script>
+<script src="dist/sample.js?v=1795762597"></script>
 </body>
 </html>
